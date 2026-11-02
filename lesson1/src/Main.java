@@ -14,7 +14,17 @@ public class Main {
         account2.showBalance();
 
         account1.deposit(50);
-
         account1.showBalance();
+
+        // one encapsulation
+        account1.balance = -500;
+        account1.showBalance();
+
+        // mit encapsulation
+        BestBankAccount account = new BestBankAccount();
+        account.deposit(-500);
+        System.out.println("owner: " + account.getBalace());
+        account.deposit(1000);
+        System.out.println("owner: " + account.getBalace());
     }
 }
